@@ -8,9 +8,9 @@ steps:
 - name: Login to GitHub Container Registry
 uses: docker/login-action@v1
 with:
-registry: ghcr.io
-username: ${{ github.actor }}
-password: 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
+       registry: ghcr.io
+       username: ${{ github.actor }}
+       password: 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
 - name: Build the hello-docker Docker image
 run: 
        docker build . --tag ghcr.io/Napoleon280/dockerfiles:latest
