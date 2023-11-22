@@ -12,9 +12,9 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }} 
-          password: ​${{ secrets.GHCR_TOKEN }}
+          password: ​${{ secrets.GITHUB_TOKEN }}
       - name: Build the hello-docker Docker image
         run:  
-          docker build . --tag ghcr.io/Napoleon280/dockerfiles:latest
-          docker run ghcr.io/Napoleon280/dockerfiles:latest
-          docker push ghcr.io/Napoleon280/dockerfiles:latest
+          docker build . --tag ghcr.io/napoleon280/dockerfiles:latest
+          docker run ghcr.io/napoleon280/dockerfiles:latest
+          docker push ghcr.io/napoleon280/dockerfiles:latest
