@@ -2,7 +2,8 @@ name: publish
 on: [push]
 jobs:
  publish-hello-docker-image:       
-  steps:
+  runs-on: ubuntu-latest
+  step:
    - uses: actions/checkout@v2
    - name: Login to GitHub Container Registry
    uses: docker/login-action@v1
