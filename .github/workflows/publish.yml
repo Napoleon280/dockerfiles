@@ -12,7 +12,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }} 
-          password: "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"
+          password: $"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"
       - name: Build the hello-docker Docker image
         run:  
           docker build . --tag ghcr.io/Napoleon280/dockerfiles:latest
