@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      echo "$CR_PAT" | docker login ghcr.io -u "$ghcr_user" --password-stdin
+        echo "$CR_PAT" | docker login ghcr.io -u "$ghcr_user" --password-stdin
       - name: Build the hello-docker Docker image
         run:  
           docker build . --tag ghcr.io/Napoleon280/dockerfiles:latest
