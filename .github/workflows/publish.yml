@@ -12,7 +12,7 @@ registry: ghcr.io
 username: ${{ github.actor }}
 password: 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
 - name: Build the hello-docker Docker image
-run: |
+run: 
        docker build . --tag ghcr.io/Napoleon280/dockerfiles:latest
        docker run ghcr.io/Napoleon280/dockerfiles:latest
        docker push ghcr.io/Napoleon280/dockerfiles:latest
