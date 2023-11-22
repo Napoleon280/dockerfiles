@@ -1,7 +1,8 @@
 name: publish 
 on: [push]
 jobs:
- publish-hello-docker-image:       
+ publish-hello-docker-image:
+  name: My Job       
   runs-on: ubuntu-latest
   steps:
    - uses: actions/checkout@v2
