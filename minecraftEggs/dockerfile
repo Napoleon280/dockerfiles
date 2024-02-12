@@ -1,11 +1,11 @@
-FROM scratch
-
-RUN apt-get update -y
-RUN apt-get install openjdk-21-jre
+FROM scratchFROM scratch
 
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
+
+RUN apt-get update -y
+RUN apt-get install openjdk-21-jre
 
 COPY        ./../entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
