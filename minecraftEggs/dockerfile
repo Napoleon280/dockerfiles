@@ -1,7 +1,7 @@
 FROM debian:latest
 
 RUN apt-get update -y
-RUN apt-get install jdk-21 -y
+RUN apt-get install default-jre -y
 
 COPY        ./../entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
