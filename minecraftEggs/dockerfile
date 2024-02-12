@@ -1,4 +1,4 @@
-FROM scratchFROM scratch
+FROM scratch
 
 USER        container
 ENV         USER=container HOME=/home/container
