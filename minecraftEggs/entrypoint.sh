@@ -1,15 +1,7 @@
-WINEPREFIX=./wine/DCSWorld
-WINEARCH="win64"
 #!/bin/bash
 cd /home/container
 
 # Output Current Java Version
 java -version ## only really needed to show what version is being used. Should be changed for different applications
 
-# Replace Startup Variables
-STARTUP="wine DCSWorld"
-MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
-echo ":/home/container$ ${MODIFIED_STARTUP}"
-
-# Run the Server
-${MODIFIED_STARTUP}
+curl -OJ https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.6/1.0.0/server/jar
