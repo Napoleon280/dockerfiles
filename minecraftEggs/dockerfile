@@ -1,7 +1,7 @@
 FROM debian:latest
 
-RUN apt-get update -y
-RUN apt-get install openjdk-21-jre
+RUN apt update -y
+RUN apt install openjdk-21-jre
 
 COPY        ./../entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
