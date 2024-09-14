@@ -3,12 +3,10 @@ FROM    alpine:latest
 	#&& apt-get install -y curl \
 	#&& useradd -d /home/container -m container \
 RUN	apk add openjdk8 
-RUN 	chmod +x server.jar
-
 
 USER    container
 ENV     USER=container HOME=/home/container
 WORKDIR /home/container
 
 COPY    ./../entrypoint.sh /entrypoint.sh
-CMD     [ "./server.jar" ]
+CMD     [ "chmod +x server.jar", "./server.jar" ]
