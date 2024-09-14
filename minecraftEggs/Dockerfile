@@ -4,10 +4,11 @@ FROM    alpine:latest
 	#&& useradd -d /home/container -m container \
 RUN	apk add openjdk8 
 
+
 USER    container
 ENV     USER=container HOME=/home/container
 WORKDIR /home/container
 
-RUN 	[“chmod”, “+x”, "/node/execure.sh”]
+RUN 	[“chmod”, “+x”, "server.jar”]
 COPY    ./../entrypoint.sh /entrypoint.sh
 CMD     [ "./server.jar" ]
