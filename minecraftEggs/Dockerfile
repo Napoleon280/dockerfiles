@@ -9,4 +9,4 @@ ENV     USER=container HOME=/home/container
 WORKDIR /home/container
 
 COPY    ./../entrypoint.sh /entrypoint.sh
-CMD     [ "chmod +x server.jar", "./server.jar" ]
+CMD     [ "chmod +x ./server.jar", "./server.jar" ]
