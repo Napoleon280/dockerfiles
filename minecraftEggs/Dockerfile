@@ -2,7 +2,7 @@ FROM    alpine:latest
 #RUN 	#apt-get update -y \
 	#&& apt-get install -y curl \
 	#&& useradd -d /home/container -m container \
-RUN	apk add openjdk8-jre
+RUN	apk add openjdk11-jre
 RUN apk add --no-cache bash 
 
 USER    container
