@@ -2,7 +2,8 @@ FROM    alpine:latest
 #RUN 	#apt-get update -y \
 	#&& apt-get install -y curl \
 	#&& useradd -d /home/container -m container \
-RUN	apk add openjdk8 
+RUN	apk add openjdk8
+RUN apk add --no-cache bash 
 
 USER    container
 ENV     USER=container HOME=/home/container
